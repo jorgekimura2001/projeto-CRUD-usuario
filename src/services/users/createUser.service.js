@@ -1,19 +1,28 @@
 import users from "../../database";
 import {v4 as uuidv4} from 'uuid'
+import { hash } from "bcryptjs";
 
-export default function createUserService (email, name, age){
-    // verificar se existe um usuário com o email que está tentando ser criado
-    const userExist = users.find(user => user.email === email)
+export default async function createUserService (user){
 
-    // se já tiver um usuário com o email mostra-se essa mensagem de erro
-    if(userExist){
-        return 'E-mail já cadastrado!'
-    }
+    const date = new Date()
+
+    const dateCreate = date.toJSON()
+
+    const hashedPassword = await hash(user.password, 10)
 
     const newUser = {
-        email, name, id: uuidv4(), age
+        email: user.email, 
+        name: user.name, 
+        uuid: uuidv4(), 
+        isAdm: user.isAdm, 
+        password: hashedPassword,
+        createdOn: dateCreate,
+        updatedOn: dateCreate
     }
+        
     users.push(newUser)
 
-    return newUser
+    const {password, ...data} = newUser
+
+    return data
 }
