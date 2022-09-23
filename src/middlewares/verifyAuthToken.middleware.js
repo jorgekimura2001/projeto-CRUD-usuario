@@ -5,7 +5,7 @@ export default function verifyAuthTokenMiddleware(req, res, next) {
 
   if (!token) {
     return res.status(401).json({
-      message: "Missing authorization token",
+      message: "Missing authorization headers",
     });
   }
 

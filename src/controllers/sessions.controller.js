@@ -8,7 +8,7 @@ export async function loginSessionController (req, res) {
 
         return res.json({token})
     } catch (error) {
-        return res.status(400).json({
+        return res.status(401).json({
             message: error.message
         })
     }
