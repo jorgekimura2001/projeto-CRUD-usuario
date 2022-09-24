@@ -5,7 +5,8 @@ import sessionRouter from "./routes/sessions.route";
 
 const app = express();
 app.use(express.json());
-app.use('/users', userRouter, sessionRouter)
+app.use('/users', userRouter)
+app.use('/login', sessionRouter)
 app.listen(3000)
   
 export default app
