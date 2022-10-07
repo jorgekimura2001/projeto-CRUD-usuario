@@ -1,8 +1,8 @@
 import createUserService from "../services/users/createUser.service"
 import deleteUserService from "../services/users/deleteUser.service"
-import listUserEspecificService from "../services/users/listUserEspecific.service"
 import listUsersService from "../services/users/listUsers.service"
 import updateUserService from "../services/users/updateUser.service"
+import listUserSpecificService from "../services/users/listUserSpecific.service"
 
 export async function createUserController (req, res){
 
@@ -23,7 +23,7 @@ export function listUserEspecificController(req,res){
     try {
         const { id } = req.user
     
-        const user = listUserEspecificService(id)
+        const user = listUserSpecificService(id)
     
         return res.json(user)
         

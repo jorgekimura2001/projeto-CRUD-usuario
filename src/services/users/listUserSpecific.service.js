@@ -1,6 +1,6 @@
 import users from "../../database";
 
-export default function listUserEspecificService (id){
+export default function listUserSpecificService (id){
     const userFiltered = users.find(user => user.uuid === id)
 
     if(!userFiltered){
