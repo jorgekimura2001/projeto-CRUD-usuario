@@ -19,7 +19,7 @@ export function listUsersController (req, res){
     return res.json(users)
 }
 
-export function listUserEspecificController(req,res){
+export function listUserSpecificController(req,res){
     try {
         const { id } = req.user
     
