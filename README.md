@@ -1,4 +1,16 @@
-# Express: CRUD de usuário + permissão de administrador
+# CRUD de usuário + permissão de administrador
+
+## Objetivo
+Aplicação com o objetivo de realizar o CRUD (Create, Read, Update e Delete) de usuários bem como realizar permissões.
+
+## Tecnologias
+<ul>
+  <li>NodeJS</li>
+  <li>Express</li>
+  <li>JavaScript</li>
+</ul>
+
+## Rodando a aplicação
 
 Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
 
@@ -133,4 +145,5 @@ E logo abaixo da lista de testes executados irá aparecer uma ou mais mensagens,
 
 `````
 #
-### Agora que já sabe como iniciar o seu projeto, rodar os testes e lê-los, é hora de colocar a mão no código!
+
+Elaborado por Jorge Kimura em colaboração com a organização Kenzie Academy Brasil
